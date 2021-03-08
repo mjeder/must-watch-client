@@ -2,33 +2,65 @@ const store = require('./../store')
 
 const signUpSuccess = (response) => {
   $('form').trigger('reset')
-  console.log('SIGN UP SUCCESS')
+  $('#sign-up-message').html('Successfully signed up! Please sign in below!')
+  setTimeout(() => {
+    $('#sign-up-message').text('')
+  }, 3000)
 }
 
 const signUpFail = (response) => {
   $('form').trigger('reset')
-  console.log('SIGN UP FAIL')
+  $('#sign-up-message').html('Hmm.. something went wrong. Please, try again.')
+  setTimeout(() => {
+    $('#sign-up-message').text('')
+  }, 3000)
 }
 
 const signInSuccess = (response) => {
   store.user = response.user
   $('form').trigger('reset')
-  console.log('SIGN IN SUCCESS')
+  // Trigger the profile screen to show up!
 }
 
 const signInFail = (response) => {
   $('form').trigger('reset')
-  console.log('SIGN IN FAIL')
+  $('#sign-in-message').html('Hmm.. something went wrong. Please, try again.')
+  setTimeout(() => {
+    $('#sign-in-message').text('')
+  }, 3000)
 }
 
 const changePasswordSuccess = (response) => {
   $('form').trigger('reset')
-  console.log('CHANGE PASSWORD SUCCESS')
+  $('#change-password-message').html('Password successfully changed!')
+  setTimeout(() => {
+    $('#change-password-message').text('')
+  }, 3000)
 }
 
 const changePasswordFail = (response) => {
   $('form').trigger('reset')
-  console.log('CHANGE PASSWORD FAIL')
+  $('#change-password-message').html('Hmm.. something went wrong. Please, try again.')
+  setTimeout(() => {
+    $('#change-password-message').text('')
+  }, 3000)
+}
+
+const signOutSuccess = (response) => {
+  $('form').trigger('reset')
+  $('#sign-out-success-message').html('Successfully signed out! Thanks for stopping by!')
+  setTimeout(() => {
+    $('#change-password-message').text('')
+  }, 3000)
+}
+
+const signOutFail = (response) => {
+  $('form').trigger('reset')
+  $('form').trigger('reset')
+  $('#sign-out-fail-message').html('Hmm.. something went wrong. Please, try again.')
+  setTimeout(() => {
+    $('#sign-out-fail-message').text('')
+  }, 3000)
 }
 
 module.exports = {
@@ -37,5 +69,7 @@ module.exports = {
   signInSuccess,
   signInFail,
   changePasswordSuccess,
-  changePasswordFail
+  changePasswordFail,
+  signOutSuccess,
+  signOutFail
 }
