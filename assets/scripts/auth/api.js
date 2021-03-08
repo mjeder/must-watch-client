@@ -23,7 +23,17 @@ const changePassword = (data) => {
     url: config.apiUrl + '/change-password',
     data: data,
     headers: {
-      Authorization: 'Bearer ' + store.user.id
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
+const signOut = function () {
+  return $.ajax({
+    url: config.apiUrl + '/sign-out',
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
     }
   })
 }
@@ -31,5 +41,6 @@ const changePassword = (data) => {
 module.exports = {
   signUp,
   signIn,
-  changePassword
+  changePassword,
+  signOut
 }
