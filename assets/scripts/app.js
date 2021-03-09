@@ -1,7 +1,7 @@
 'use strict'
 
 const authEvents = require('./auth/events')
-const filmEvents = require('.auth/events')
+const filmEvents = require('./film/events')
 
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
