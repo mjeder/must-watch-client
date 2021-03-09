@@ -22,7 +22,30 @@ const getFilms = (data) => {
   })
 }
 
+const deleteFilm = function (id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/films/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
+const updateFilm = function (id, data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/films/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
   addFilm,
-  getFilms
+  getFilms,
+  deleteFilm,
+  updateFilm
 }

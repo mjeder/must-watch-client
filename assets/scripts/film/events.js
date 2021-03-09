@@ -21,7 +21,32 @@ const onGetFilms = (events) => {
     .catch(ui.getFilmsFail)
 }
 
+// User deletes film off #MustWatch list
+const onDeleteFilm = (event) => {
+  event.preventDefault()
+  const deleteButton = event.target
+  const id = $(deleteButton).data('id')
+  api.deleteFilm(id)
+    .then(ui.deleteFilmSuccess)
+    .then(onGetFilms)
+    .catch(ui.deleteFilmFail)
+}
+
+// User updates a film on their #MustWatch list
+const onUpdateFilm = (event) => {
+  event.preventDefault()
+  const updateForm = event.target
+  const id = $(updateForm).data('id')
+  const formData = getFormFields(updateForm)
+  api.updateFilm(id, formData)
+    .then(ui.updateFilmSuccess)
+    .then(onGetFilms)
+    .catch(ui.updateFilmFail)
+}
+
 module.exports = {
   onAddFilm,
-  onGetFilms
+  onGetFilms,
+  onDeleteFilm,
+  onUpdateFilm
 }
