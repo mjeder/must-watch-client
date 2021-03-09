@@ -2,10 +2,10 @@ const store = require('./../store')
 
 const signUpSuccess = (response) => {
   $('form').trigger('reset')
-  $('#sign-up-message').html('Successfully signed up! Please sign in below!')
+  $('#sign-up-message').html('Account created! Please sign in below!')
   setTimeout(() => {
     $('#sign-up-message').html('')
-  }, 3000)
+  }, 5000)
 }
 
 const signUpFail = (response) => {
@@ -19,7 +19,9 @@ const signUpFail = (response) => {
 const signInSuccess = (response) => {
   store.user = response.user
   $('form').trigger('reset')
-  // Trigger the profile screen to show up!
+  $('#welcome-view').hide()
+  $('#must-watch-view').show()
+  $('#change-password-form').hide()
 }
 
 const signInFail = (response) => {
@@ -32,10 +34,11 @@ const signInFail = (response) => {
 
 const changePasswordSuccess = (response) => {
   $('form').trigger('reset')
+  $('#change-password-form').hide()
   $('#change-password-message').html('Password successfully changed!')
   setTimeout(() => {
     $('#change-password-message').html('')
-  }, 3000)
+  }, 2000)
 }
 
 const changePasswordFail = (response) => {
@@ -48,6 +51,8 @@ const changePasswordFail = (response) => {
 
 const signOutSuccess = (response) => {
   $('form').trigger('reset')
+  $('#must-watch-view').hide()
+  $('#welcome-view').show()
   $('#sign-out-success-message').html('Successfully signed out! Thanks for stopping by!')
   setTimeout(() => {
     $('#change-password-message').html('')
@@ -55,7 +60,6 @@ const signOutSuccess = (response) => {
 }
 
 const signOutFail = (response) => {
-  $('form').trigger('reset')
   $('form').trigger('reset')
   $('#sign-out-fail-message').html('Hmm.. something went wrong. Please, try again.')
   setTimeout(() => {

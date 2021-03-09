@@ -20,6 +20,11 @@ const onSignIn = (event) => {
     .catch(ui.signInFail)
 }
 
+const showChangePassword = function (event) {
+  event.preventDefault()
+  $('#change-password-form').show()
+}
+
 const onChangePassword = (event) => {
   event.preventDefault()
   const form = event.target
@@ -41,6 +46,7 @@ const onSignOut = (event) => {
 module.exports = {
   onSignUp,
   onSignIn,
+  showChangePassword,
   onChangePassword,
   onSignOut
 }

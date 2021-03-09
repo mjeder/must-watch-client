@@ -1,5 +1,3 @@
-// const store = require('./../store')
-
 const addFilmSuccess = () => {
   $('form').trigger('reset')
   $('#add-film-message').html('Successfully added to your #MustWatch list!')

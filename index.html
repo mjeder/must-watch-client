@@ -35,23 +35,20 @@
         </section>
       </section>
 
-      <section id=change-password-view>
-        <form id='change-password'>
-          <input name='passwords[old]' type='text' placeholder='Old Password'>
-          <input name='passwords[new]' type='text' placeholder='New Password'>
-          <button type='submit'>Change Password</button>
+      <section id='must-watch-view'>
+        <form id='pw-button'>
+          <button>Change Password</button>
         </form>
         <div id='change-password-message'></div>
-      </section>
-
-      <section id='sign-out-view'>
-        <form class='sign-out'>
+        <form id='change-password-form'>
+          <input name='passwords[old]' type='text' placeholder='Old Password'>
+          <input name='passwords[new]' type='text' placeholder='New Password'>
+          <button type='submit'>Confirm Password Change</button>
+        </form>
+        <form id='sign-out'>
           <button type='submit'>Sign Out</button>
         </form>
         <div id='sign-out-fail-message'></div>
-      </section>
-
-      <section id='add-film-view'>
         <form id='add-films'>
           <label for='film-title'>Title:</label>
             <input id='film-title' name='film[title]' type='text' placeholder='"The Office"'>
@@ -65,9 +62,6 @@
         </form>
         <div id='add-film-message'></div>
         <button id='open-list' type='submit'>View my #MustWatch list!</button>
-      </section>
-
-      <section id='must-watch-list'>
         <div id='films-list'></div>
       </section>
 
