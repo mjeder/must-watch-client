@@ -8,6 +8,7 @@ const onAddFilm = (event) => {
   const form = event.target
   const data = getFormFields(form)
   api.addFilm(data)
+    .then(ui.addFilmSuccess)
     .then(onGetFilms)
     .catch(ui.addFilmFail)
 }
