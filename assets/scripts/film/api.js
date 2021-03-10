@@ -22,7 +22,7 @@ const getFilms = (data) => {
   })
 }
 
-const deleteFilm = function (id) {
+const deleteFilm = (id) => {
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/films/' + id,
@@ -32,7 +32,7 @@ const deleteFilm = function (id) {
   })
 }
 
-const updateFilm = function (id, data) {
+const updateFilm = (id, data) => {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/films/' + id,

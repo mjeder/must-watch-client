@@ -2,6 +2,13 @@ const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('../../../lib/get-form-fields')
 
+// User views all films on their #MustWatch list, cannot access anyone elses (yet)
+const onGetFilms = (event) => {
+  api.getFilms()
+    .then(ui.getFilmsSuccess)
+    .catch(ui.getFilmsFail)
+}
+
 // User creates a TV Show or Movie to add to #MustWatch list
 const onAddFilm = (event) => {
   event.preventDefault()
@@ -11,14 +18,6 @@ const onAddFilm = (event) => {
     .then(ui.addFilmSuccess)
     .then(onGetFilms)
     .catch(ui.addFilmFail)
-}
-
-// User views all films on their #MustWatch list, cannot access anyone elses (yet)
-const onGetFilms = (events) => {
-  // event.preventDefault()
-  api.getFilms()
-    .then(ui.getFilmsSuccess)
-    .catch(ui.getFilmsFail)
 }
 
 // User deletes film off #MustWatch list
@@ -45,8 +44,8 @@ const onUpdateFilm = (event) => {
 }
 
 module.exports = {
-  onAddFilm,
   onGetFilms,
+  onAddFilm,
   onDeleteFilm,
   onUpdateFilm
 }

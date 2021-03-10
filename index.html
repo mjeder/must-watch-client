@@ -12,58 +12,64 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-
-      <section id='welcome-view'>
-        <h1>#MustWatch</h1>
-        <section>
-          <form id='sign-up'>
-            <input name='credentials[email]' type='email' placeholder='Email'>
-            <input name='credentials[password]' type='text' placeholder='Password'>
-            <input name='credentials[password_confirmation]' type='text' placeholder='Password Confirmation'>
-            <button type='submit'>Sign Up</button>
-          </form>
-          <div id='sign-up-message'></div>
+      <header>
+        <div class='col-12' id='marquee'>
+          <img class="marquee-picture" src="must-watch-marquee.png" alt="Welcome to Must Watch">
+        </div>
+      </header>
+      <main>
+        <section id='welcome-view'>
+          <div class='container'>
+            <div class='col'>
+              <form id='sign-up' class='form-group'>
+                <input class='col-6 mb-2 mt-5 creds' name='credentials[email]' type='email' placeholder='Email'>
+                <input class='col-6 mb-2 creds' name='credentials[password]' type='password' placeholder='Password'>
+                <input class='col-6 mb-2 creds' name='credentials[password_confirmation]' type='password' placeholder='Password Confirmation'>
+                <button type='submit' class='btn col-6 mb-2'>Sign Up</button>
+              </form>
+              <div id='sign-up-message'></div>
+            </div>
+            <div class='col'>
+              <form id='sign-in' class='form-group'>
+                <input class='col-6 mb-2 mt-5 creds' name='credentials[email]' type='email' placeholder='Email'>
+                <input class='col-6 mb-2 creds' name='credentials[password]' type='password' placeholder='Password'>
+                <button type='submit' class='btn col-6 mb-2'>Sign In</button>
+              </form>
+              <div id='sign-in-message'></div>
+              <div id='sign-out-success-message'></div>
+            </div>
+          </div>
         </section>
-        <section>
-          <form id='sign-in'>
-            <input name='credentials[email]' type='email' placeholder='Email'>
-            <input name='credentials[password]' type='text' placeholder='Password'>
-            <button type='submit'>Sign In</button>
+
+        <section id='must-watch-view'>
+          <form id='pw-button'>
+            <button class='btn'>Change Password</button>
           </form>
-          <div id='sign-in-message'></div>
-          <div id='sign-out-success-message'></div>
+          <div id='change-password-message'></div>
+          <form id='change-password-form'>
+            <input name='passwords[old]' type='password' placeholder='Old Password'>
+            <input name='passwords[new]' type='password' placeholder='New Password'>
+            <button type='submit' class='btn'>Confirm Password Change</button>
+          </form>
+          <form id='sign-out'>
+            <button type='submit' class='btn'>Sign Out</button>
+          </form>
+          <div id='sign-out-fail-message'></div>
+          <form id='add-films'>
+            <label for='film-title'>Title:</label>
+              <input id='film-title' name='film[title]' type='text' placeholder='"The Office"'>
+            <label for='film-type'>TV Show or Movie:</label>
+              <input id='film-type' name='film[type]' type='text' placeholder='"TV Show"'>
+            <label for='film-genre'>Genre:</label>
+              <input id='film-genre' name='film[genre]' type='text' placeholder='"Comedy"'>
+            <label for='film-platform'>Available On:</label>
+              <input id='film-platform' name='film[platform]' type='text' placeholder='"Peacock"'>
+            <button type='submit' class='btn'>Add to #MustWatch list!</button>
+          </form>
+          <div id='add-film-message'></div>
+          <button id='open-list' type='submit' class='btn'>View my #MustWatch list!</button>
+          <div id='films-list'></div>
         </section>
-      </section>
-
-      <section id='must-watch-view'>
-        <form id='pw-button'>
-          <button>Change Password</button>
-        </form>
-        <div id='change-password-message'></div>
-        <form id='change-password-form'>
-          <input name='passwords[old]' type='text' placeholder='Old Password'>
-          <input name='passwords[new]' type='text' placeholder='New Password'>
-          <button type='submit'>Confirm Password Change</button>
-        </form>
-        <form id='sign-out'>
-          <button type='submit'>Sign Out</button>
-        </form>
-        <div id='sign-out-fail-message'></div>
-        <form id='add-films'>
-          <label for='film-title'>Title:</label>
-            <input id='film-title' name='film[title]' type='text' placeholder='"The Office"'>
-          <label for='film-type'>TV Show or Movie:</label>
-            <input id='film-type' name='film[type]' type='text' placeholder='"TV Show"'>
-          <label for='film-genre'>Genre:</label>
-            <input id='film-genre' name='film[genre]' type='text' placeholder='"Comedy"'>
-          <label for='film-platform'>Available On:</label>
-            <input id='film-platform' name='film[platform]' type='text' placeholder='"Peacock"'>
-          <button type='submit'>Add to #MustWatch list!</button>
-        </form>
-        <div id='add-film-message'></div>
-        <button id='open-list' type='submit'>View my #MustWatch list!</button>
-        <div id='films-list'></div>
-      </section>
-
+      </main>
     </body>
 </html>

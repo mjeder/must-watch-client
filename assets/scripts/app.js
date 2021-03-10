@@ -17,6 +17,6 @@ $(() => {
   $('#films-list').on('click', '.delete-film', filmEvents.onDeleteFilm)
   $('#films-list').on('submit', '.update-film', filmEvents.onUpdateFilm)
 
-  // Views
+  // Initial View
   $('#must-watch-view').hide()
 })

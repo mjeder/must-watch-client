@@ -55,7 +55,7 @@ const signOutSuccess = (response) => {
   $('#welcome-view').show()
   $('#sign-out-success-message').html('Successfully signed out! Thanks for stopping by!')
   setTimeout(() => {
-    $('#change-password-message').html('')
+    $('#sign-out-success-message').html('')
   }, 3000)
 }
 

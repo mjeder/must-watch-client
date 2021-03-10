@@ -1,1 +1,48 @@
 @import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+body {
+  background-color: #4c5781;
+  color: #eeeee4;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+header {
+  background-image: url("spotlight-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: inherit;
+  text-align: center;
+}
+
+.btn {
+  background-color: #bd1e2d;
+  color: #eeeee4;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.creds {
+  text-align: center;
+  font-size: 18px;
+}
+
+img {
+  height: 450px;
+  padding: 30px;
+}
+
+#sign-up-message,
+#sign-in-message,
+#sign-out-success-message,
+#sign-out-fail-message,
+#change-password-message,
+#add-film-message {
+  font-size: 18px;
+}
