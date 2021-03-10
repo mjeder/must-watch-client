@@ -42,34 +42,44 @@
         </section>
 
         <section id='must-watch-view'>
-          <form id='pw-button'>
-            <button class='btn'>Change Password</button>
-          </form>
-          <div id='change-password-message'></div>
-          <form id='change-password-form'>
-            <input name='passwords[old]' type='password' placeholder='Old Password'>
-            <input name='passwords[new]' type='password' placeholder='New Password'>
-            <button type='submit' class='btn'>Confirm Password Change</button>
-          </form>
-          <form id='sign-out'>
-            <button type='submit' class='btn'>Sign Out</button>
-          </form>
-          <div id='sign-out-fail-message'></div>
-          <form id='add-films'>
-            <label for='film-title'>Title:</label>
-              <input id='film-title' name='film[title]' type='text' placeholder='"The Office"'>
-            <label for='film-type'>TV Show or Movie:</label>
-              <input id='film-type' name='film[type]' type='text' placeholder='"TV Show"'>
-            <label for='film-genre'>Genre:</label>
-              <input id='film-genre' name='film[genre]' type='text' placeholder='"Comedy"'>
-            <label for='film-platform'>Available On:</label>
-              <input id='film-platform' name='film[platform]' type='text' placeholder='"Peacock"'>
-            <button type='submit' class='btn'>Add to #MustWatch list!</button>
-          </form>
-          <div id='add-film-message'></div>
-          <button id='open-list' type='submit' class='btn'>View my #MustWatch list!</button>
+          <div id='welcome-message'></div>
+          <div class='container'>
+            <div class='col'>
+              <form id='pw-button' class='form-group'>
+                <button class='btn mb-2 mt-2'>Change Password</button>
+              </form>
+              <div id='change-password-message'></div>
+              <form id='change-password-form' class='form-group'>
+                <input class='mb-2 col-6 creds' name='passwords[old]' type='password' placeholder='Old Password'>
+                <input class='mb-2 col-6 creds' name='passwords[new]' type='password' placeholder='New Password'>
+                <button type='submit' class='btn col-6 mb-2'>Confirm Password Change</button>
+              </form>
+              <form id='sign-out' class='form-group'>
+                <button type='submit' class='btn mb-5'>Sign Out</button>
+              </form>
+              <div id='sign-out-fail-message'></div>
+            </div>
+          </div>
+          <div class='container'>
+            <p>Add your movies and tv shows you've been dying to see onto your #MustWatch list!</p>
+            <p>Just fill out the form below and click 'Add to #MustWatch list!' so you never forget the shows/movies you've been hearing about!</p>
+            <div class='col'>
+              <form id='add-films' class='form-group'>
+                  <input class='film-info' name='film[title]' type='text' placeholder='Title'>
+                  <input class='film-info' name='film[type]' type='text' placeholder='TV Show or Movie'>
+                  <input class='film-info' name='film[genre]' type='text' placeholder='Genre'>
+                  <input class='film-info' name='film[platform]' type='text' placeholder='Streaming Service'>
+                  <button type='submit' class='btn mt-3 mb-5'>Add to #MustWatch list!</button>
+              </form>
+              <div id='add-film-message'></div>
+            </div>
+            <p>Click the button below to view the shows/movies you've added to your list!</p>
+            <button id='open-list' type='submit' class='btn mb-4'>View my #MustWatch list!</button>
+          </div>
+          <hr>
           <div id='films-list'></div>
         </section>
+
       </main>
     </body>
 </html>

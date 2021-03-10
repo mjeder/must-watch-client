@@ -18,10 +18,10 @@ const getFilmsSuccess = (response) => {
   let filmsHtml = ''
   films.forEach(film => {
     filmsHtml += `
-      <h3>${film.title}</h3>
+      <h2>${film.title}</2>
       <p>${film.type} | ${film.genre}</p>
       <p>Streaming on ${film.platform}</p>
-      <button class='delete-film btn' data-id=${film._id}>Remove</button>   |   <button id='update-film-button' class='btn'>Edit</button>
+      <button class='delete-film btn' data-id=${film._id}>Remove</button>   |   <button id='update-film-button' class='btn' data-id=${film._id}>Edit</button>
       <form class="update-film" data-id=${film._id}>
         <input type="text" name="film[title]" placeholder="New Title">
         <input type="text" name="film[type]" placeholder="New Type">

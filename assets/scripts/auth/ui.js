@@ -18,10 +18,13 @@ const signUpFail = (response) => {
 
 const signInSuccess = (response) => {
   store.user = response.user
+  const userEmail = response.user.email
+  const welcomeUser = `Welcome ${userEmail}!`
   $('form').trigger('reset')
   $('#welcome-view').hide()
   $('#must-watch-view').show()
   $('#change-password-form').hide()
+  $('#welcome-message').html(welcomeUser)
 }
 
 const signInFail = (response) => {

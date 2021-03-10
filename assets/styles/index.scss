@@ -33,9 +33,23 @@ header {
   font-size: 18px;
 }
 
+.film-info {
+  text-align: center;
+}
+
 img {
   height: 450px;
   padding: 30px;
+}
+
+#welcome-message {
+  margin: 15px;
+  font-size: 40px;
+}
+
+p {
+  font-size: 25px;
+  margin: 15px;
 }
 
 #sign-up-message,
