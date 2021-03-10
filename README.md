@@ -1,7 +1,7 @@
 # #MustWatch
-It's a cold and rainy Sunday... you decide it's a perfect opportunity to lay down on the couch with a blanket, bowl of popcorn, and your favorite beverage and finally turn on a movie or TV show. BUT... you can't remember the name of that TV show all of your co-workers are talking about or the name of the movie your friends always give you a hard time for not seeing yet. 
+It's a cold and rainy Sunday... you decide it's a perfect opportunity to lay down on the couch with a blanket, bowl of popcorn, and your favorite beverage and finally turn on a movie or TV show. BUT... you can't remember the name of that TV show all of your co-workers are talking about or the name of the movie your friends always give you a hard time for not seeing yet.
 
-So, what do you do? 
+So, what do you do?
 
 You pull out your phone and log into your #MustWatch account to view your list of TV shows and movies that you've been told you must watch!
 ___
@@ -105,8 +105,8 @@ ___
 ___
 ## Would like to eventually:
 - [ ] Separate lists, so there is a TV list and Movie list. Possibly break those two lists into subcategories by genre.
-- [ ] Add a watched list, so instead of just deleting the film you click 'watched' and it goes to a separate list for reference. 
-- [ ] Add a randomizer button, so you can have the app randomly pick a movie or show on your list for you to watch. For those nights when you cant make a decision. 
+- [ ] Add a watched list, so instead of just deleting the film you click 'watched' and it goes to a separate list for reference.
+- [ ] Add a randomizer button, so you can have the app randomly pick a movie or show on your list for you to watch. For those nights when you cant make a decision.
 - [ ] The ultimate goal is to have Guidebox API built into the app and allow users to search for shows and movies to add to their list instead of manually typing them in. Could also be used for strictly a database if you wanted to check if a specific movie or tv show is on a streaming service you subscribe to.
 ___
 ## Wireframe:
