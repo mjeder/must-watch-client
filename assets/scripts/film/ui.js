@@ -36,6 +36,12 @@ const getFilmsSuccess = (response) => {
   $('#update-film-button').click(function () {
     $('.update-film').show()
   })
+  if ($('#films-list').html() === '') {
+    $('#films-list').html('You have no films in your #MustWatch list! Add your films by filling out the form above!')
+    setTimeout(() => {
+      $('#films-list').html('')
+    }, 5000)
+  }
 }
 
 const getFilmsFail = () => {
