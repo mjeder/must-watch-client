@@ -18,13 +18,15 @@ const signUpFail = (response) => {
 
 const signInSuccess = (response) => {
   store.user = response.user
-  const userEmail = response.user.email
-  const welcomeUser = `Welcome ${userEmail}!`
+  // const userEmail = response.user.email
+  // const welcomeUser = `Welcome ${userEmail}!`
   $('form').trigger('reset')
   $('#welcome-view').hide()
+  $('#marquee').hide()
   $('#must-watch-view').show()
   $('#change-password-form').hide()
-  $('#welcome-message').html(welcomeUser)
+  $('.admin').hide()
+  // $('#welcome-message').html(welcomeUser)
 }
 
 const signInFail = (response) => {
@@ -56,6 +58,7 @@ const signOutSuccess = (response) => {
   $('form').trigger('reset')
   $('#must-watch-view').hide()
   $('#welcome-view').show()
+  $('#marquee').show()
   $('#sign-out-success-message').html('Successfully signed out! Thanks for stopping by!')
   setTimeout(() => {
     $('#sign-out-success-message').html('')

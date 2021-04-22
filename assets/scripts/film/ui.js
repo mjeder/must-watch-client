@@ -33,6 +33,7 @@ const getFilmsSuccess = (response) => {
   })
   $('#films-list').html(filmsHtml)
   $('.update-film').hide()
+  $('#marquee').hide()
   $('#update-film-button').click(function () {
     $('.update-film').show()
   })

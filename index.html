@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="shortcut icon" type="image/x-icon" href="https://icongr.am/material/movie-open.svg?size=128&color=a53042">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -42,38 +42,40 @@
         </section>
 
         <section id='must-watch-view'>
+          <div class='col-12' id='marquee-2'>
+            <img class="marquee-picture" src="public/must-watch-marquee.png" alt="Welcome to Must Watch">
+          </div>
           <div id='welcome-message'></div>
-          <div class='container'>
+          <div class='container admin'>
             <div class='col'>
-              <form id='pw-button' class='form-group'>
+              <form id='pw-button' class='col-6'>
                 <button class='btn mb-2 mt-2'>Change Password</button>
               </form>
-              <div id='change-password-message'></div>
-              <form id='change-password-form' class='form-group'>
-                <input class='mb-2 col-6 creds' name='passwords[old]' type='password' placeholder='Old Password'>
-                <input class='mb-2 col-6 creds' name='passwords[new]' type='password' placeholder='New Password'>
-                <button type='submit' class='btn col-6 mb-2'>Confirm Password Change</button>
-              </form>
-              <form id='sign-out' class='form-group'>
-                <button type='submit' class='btn mb-5'>Sign Out</button>
+              <form id='sign-out' class='col-6'>
+                <button type='submit' class='btn mb-2 mt-1'>Sign Out</button>
               </form>
               <div id='sign-out-fail-message'></div>
             </div>
           </div>
+          <div id='change-password-message'></div>
+          <form id='change-password-form' class='form-group'>
+            <input class='mb-2 col-6 creds' name='passwords[old]' type='password' placeholder='Old Password'>
+            <input class='mb-2 col-6 creds' name='passwords[new]' type='password' placeholder='New Password'>
+            <button type='submit' class='btn col-6 mb-2'>Confirm Password Change</button>
+          </form>
+
           <div class='container'>
-            <p>Add your movies and tv shows you've been dying to see onto your #MustWatch list!</p>
-            <p>Just fill out the form below and click 'Add to #MustWatch list!' so you never forget the shows/movies you've been hearing about!</p>
+            <p>Add Movie or TV Show to my #MustWatch List</p>
             <div class='col'>
               <form id='add-films' class='form-group'>
                   <input class='film-info' name='film[title]' type='text' placeholder='Title'>
                   <input class='film-info' name='film[type]' type='text' placeholder='TV Show or Movie'>
                   <input class='film-info' name='film[genre]' type='text' placeholder='Genre'>
                   <input class='film-info' name='film[platform]' type='text' placeholder='Streaming Service'>
-                  <button type='submit' class='btn mt-3 mb-5'>Add to #MustWatch list!</button>
+                  <button type='submit' class='btn mt-3 mb-2'>Add to #MustWatch list!</button>
               </form>
               <div id='add-film-message'></div>
             </div>
-            <p>Click the button below to view the shows/movies you've added to your list!</p>
             <button id='open-list' type='submit' class='btn mb-4'>View my #MustWatch list!</button>
           </div>
           <hr>
